@@ -107,9 +107,6 @@ class FPaymentsSCForm {
             'recurring_finish_date' => $recurring_finish_date,
         );
         if ($receipt_items) {
-            if (!$receipt_contact) {
-                throw new FPaymentsSCError('receipt_contact required');
-            }
             $receipt = new FPaymentsSCReciept($amount);
             foreach($receipt_items as $item) {
                 $receipt->addItem($item);
