@@ -238,9 +238,6 @@ abstract class AbstractFPaymentsSCCallbackHandler {
     abstract protected function mark_order_as_error($order, array $data);
 
     function show(array $data) {
-        if (get_magic_quotes_gpc()) {
-           array_walk_recursive($data, 'stripslashes_gpc');
-        }
         $error = null;
         $debug_messages = array();
         $ff = $this->get_fpayments_form();
