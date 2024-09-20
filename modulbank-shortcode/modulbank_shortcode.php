@@ -2,7 +2,7 @@
 /*
   Plugin Name: Modulbank Shortcode
   Description: Shortcode for Modulbank payments
-  Version: 2.3
+  Version: 2.4
 */
 
 if (!class_exists('FPaymentsSCForm')) {
